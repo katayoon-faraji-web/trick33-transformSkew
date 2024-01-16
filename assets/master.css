@@ -1,0 +1,54 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+* > main {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-image: linear-gradient(90deg, rgb(131, 58, 180) 0%, rgb(253, 29, 29) 61%, rgb(252, 153, 63) 94%, rgb(252, 176, 69));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+* > main > section {
+  width: 800px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+* > main > section > span {
+  font-size: 200px;
+  color: rgb(33, 209, 245);
+  font-family: cursive;
+  margin: 0 10px;
+  position: relative;
+}
+* > main > section > span:hover::before {
+  transform: skewY(1deg);
+}
+* > main > section > span:hover::after {
+  transform: rotateY(-10deg);
+}
+* > main > section > span::before, * > main > section > span::after {
+  content: attr(data-content);
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.4s;
+}
+* > main > section > span::before {
+  color: white;
+  transform-origin: top left;
+  transform: skewY(10deg);
+}
+* > main > section > span::after {
+  color: rgb(247, 80, 247);
+  transform-origin: top left;
+  transform: perspective(900px) rotateY(-30deg);
+}/*# sourceMappingURL=master.css.map */
